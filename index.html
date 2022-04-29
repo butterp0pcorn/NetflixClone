@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Netflix | Home</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <a href="#" class="logo"><img src="images/logo.png" /></a>
+    <ul class="navigation">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">TV shows</a></li>
+      <li><a href="#">Movies</a></li>
+      <li><a href="#">Latest</a></li>
+      <li><a href="#">My list</a></li>
+    </ul>
+    <div class="search">
+      <input type="text" placeholder="search" />
+      <i class="fa fa-search" aria-hidden="true"></i>
+    </div>
+  </header>
+  <div class="banner">
+    <!-- <img src="images/bg.jpg" class="bg" /> -->
+    <div class="content">
+      <img src="images/name.png" class="movietitle" id="movietitle"/>
+      <h2>Spider-Man: Far from Home</h2>
+      <h4>
+        <span>2021</span>
+        <span><i>13+</i></span>
+        <span>2h 28min</span>
+        <span>Action/Adventure</span>
+      </h4>
+      <p>
+        With Spider-Man's identity now revealed, our friendly neighborhood web-slinger is unmasked and no longer able to
+        separate his normal life as Peter Parker from the high stakes of being a superhero. When Peter asks for help
+        from Doctor Strange, the stakes become even more dangerous, forcing him to discover what it truly means to be
+        Spider-Man.
+      </p>
+    
+      <div class="button">
+        <a href="#"><i class="fa fa-play" aria-hidden="true"></i>Play</a>
+      </div>
+      <div class="buttons">
+        <a href="#"><i class="fa fa-plus" aria-hidden="true"></i>My list</a>
+      </div>
+      <p>Starring: <span>&nbsp;<a href="https://en.wikipedia.org/wiki/Zendaya">Tom Holland</a>, <a href="https://en.wikipedia.org/wiki/Zendaya">Zendaya</a>, <a href="">Samuel L. Jackson</a></span>
+      </p>
+    </div>
+  </div>
+  <a href="#" class="play" onclick="togglevideo()"><img src="images/play.png" />Watch Trailer</a>
+   <div class="trailer">
+    <video controls="true" src="video.mp4" >
+    </video>
+  <img src="images/close.png" class="close" onclick="togglevideo()" />
+</div>
+<script>
+  function togglevideo() {
+    const trailer = document.querySelector(".trailer");
+    const video = document.querySelector('video');
+    trailer.classList.toggle("active");
+    video.currentTime = 0;
+    video.pause();
+  }
+</script>
+
+</body>
+
+</html>
