@@ -1,0 +1,419 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:wght@300,400,500,600,700,800,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-image: url("../images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 100px;
+  z-index: 100;
+}
+header .logo img {
+  max-width: 150px;
+}
+.navigation {
+  display: flex;
+}
+.navigation li {
+  list-style: none;
+  margin: 0 10px;
+}
+.navigation li a {
+  color: #ffff;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-shadow: 0.5px 0.5px #111;
+}
+.navigation li a:hover {
+  text-decoration: underline;
+}
+.navigation li:hover {
+  color: #de0611;
+}
+.search {
+  position: relative;
+  width: 300px;
+  height: 40px;
+}
+.search input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 2555, 0.5);
+  outline: none;
+  border-radius: 4px;
+  padding: 10px 45px;
+  backdrop-filter: blur(5px);
+}
+.search input::placeholder {
+  color: #fff;
+}
+.search .fa-search {
+  position: absolute;
+  top: 30%;
+  left: 10px;
+  transform: translate(-50%);
+  padding-left: 28px;
+  padding-right: 10px;
+  color: #fff;
+  border-right: 1px solid #fff;
+}
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 550px;
+}
+.movietitle {
+  position: relative;
+  width: 350px;
+  height: 200px;
+}
+.banner .content {
+  color: rgba(255, 255, 2555, 0.5);
+  font-weight: 500;
+}
+.banner .content h4 span {
+  padding: 0 10px;
+  color: #C0C0C0;
+  text-shadow: 1.3px 1.3px #111;
+  font-weight: 100;
+  font-size: 14px;
+}
+.banner .content h4 span:nth-child(1) {
+  padding-left: 0;
+  border-right: 1px solid rgba(255, 255, 2555, 0.5);
+}
+.banner .content h4 span:nth-child(2){
+  border-right: 1px solid rgba(255, 255, 2555, 0.5);
+}
+.banner .content h4 span:nth-child(3) {
+  border-radius: none;
+  border-right: 1px solid rgba(255, 255, 2555, 0.5);
+}
+.banner .content h4 span i {
+  background: #de0611;
+  color: #fff;
+  padding: 0 8px;
+  font-style: normal;
+  border-radius: 2px;
+}
+.banner .content p {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 10px 0 20px;
+  text-shadow: 0.3px 0.3px #111;
+}
+.banner .content p a {
+  color: azure;
+}
+.banner .content .button a {
+  position: relative;
+}
+.banner .content .button .fa-play {
+  width: 20px;
+}
+.banner .content .button a {
+  position: relative;
+  background: #345;
+  color: #fff;
+  padding: 6px 15px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 14px;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+.banner .content .buttons a {
+  position: relative;
+}
+.banner .content .buttons .fa-plus {
+  width: 20px;
+}
+.banner .content .buttons a {
+  top: -18px;
+  left: 105px;
+  color: #fff;
+  padding: 6px 15px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.banner .content .buttons a {
+  background: rgba(161, 155, 155, 0.1);
+  border: 0.1px solid rgba(255, 255, 2555, 0.1);
+}
+.banner .content .buttons a:hover {
+  background: #de0611;
+}
+.play {
+  position: absolute;
+  bottom: 30px;
+  left: 100px;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: 0.3s;
+  opacity: 0.6;
+  text-shadow: 1.3px 1.3px #111;
+}
+.play img {
+  margin-right: 15px;
+  max-width: 50px;
+  transition: 0.3s;
+  opacity: 0.6;
+  cursor: pointer;
+  box-shadow: 1px #111;
+}
+.play:hover{
+  opacity: 1;
+  text-decoration: underline;
+}
+.play img:hover{
+  opacity: 1;
+}
+.trailer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(8px);
+  visibility: hidden;
+  opacity: 0;
+}
+.trailer.active {
+  visibility: visible;
+  opacity: 1;
+} 
+.trailer video {
+ position: relative;
+ max-width: 900px;
+ outline: none;
+}
+.close {
+  position: absolute;
+  filter: invert(1);
+  top: 30px;
+  right: 30px;
+  color: #fff;
+  max-width: 32px;
+  cursor: pointer;
+} 
+.content h2{
+  padding: 20px 0 10px 0;
+  color: white;
+}
+
+@media (max-width: 991px){
+  .trailer video
+ {
+    max-width: 95%;
+  }
+}
+
+ @media (max-width: 991px) {
+  header {
+    padding: 20px 50px;
+    flex-direction: column;
+  }
+  .navigation {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+  }
+  .banner {
+   top: 0;
+  }
+}
+@media (min-width: 930px) and (max-width:1600px) {
+  body{
+    background-image: url("../images/bg.jpg");
+    background-size: cover;
+  }
+}
+@media (min-width: 531px) and (max-width: 929px) {
+    body{
+      background-image: url("../images/third.jpg");
+      background-size: cover;
+    }
+    #movietitle{
+     content: url('../images/wwww.png');
+     width: 400px;
+     height: 190px;
+     position: relative;
+     margin-top: 7rem;    
+    }
+}
+@media (min-width: 480px) and (max-width: 580px) {
+  body{
+    background-image: url("../images/fourth.jpg");
+    background-size: cover;
+  }
+    .play{
+      position: relative;
+      margin-top: 2rem;
+     }
+     #movietitle{
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      content: url('../images/wwww.png');
+      margin-top: 10em;
+      max-width: 330px;
+      height: 190px;
+      padding: 10px;
+      margin-bottom: -15px;
+     }
+     .content
+     {
+       text-align: center;
+     }
+  }
+@media (min-width: 480px) and (max-width: 580px){
+  .buttons,
+     .button{
+       position: relative;
+       margin-left: -7.5rem;
+     }
+}
+@media (min-width: 581px) and (max-width: 980px) {
+  body{
+    background-image: url("../images/fourth.jpg");
+    background-size: cover;
+    
+  }
+  .banner .content p{
+    font-size: 1rem;
+    padding-right: 10px;
+    left: 0;
+  }s
+  .movietitle{
+    position: relative;
+    margin-top: 90px;
+    width: 350px;
+  }
+  .play{
+    position: relative;
+    margin-top: 5px;
+  }
+  .content h2{
+    font-size: 1.2em;
+  }
+}
+.banner .content p:last-child{
+  color: #C0C0C0;
+}
+.banner .content p span a{
+  text-decoration: none;
+}
+.banner .content p span a:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+.banner .content p span:last-child{
+  color: #fff;
+}
+
+@media (max-width: 479px) {
+  .content img{
+    position: relative;
+    margin-left: -2em;
+    padding-top: 3em;
+  }
+  .search{
+    position: relative;
+    padding: 10px;
+  }
+ .content{
+      margin-left: -4em;
+    }
+  }
+@media (min-width: 200px) and (max-width: 479px){
+  body{
+    background-image: url("../images/fourth.jpg");
+    background-size: cover;
+  }
+  .play{
+    position: relative;
+    margin-top: 2rem;
+    margin-left: -4.2rem;
+   }
+   #movietitle{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: url('../images/wwww.png');
+    margin-top: 11em;
+    max-width: 290px;
+    height: 190px;
+    padding: 10px;
+    margin-left: -1rem;
+   }
+   .content
+   {
+    position: relative;
+    z-index: 1;
+    max-width: 550px;
+   }
+   .buttons,
+   .button{
+     position: relative;
+   }
+} 
